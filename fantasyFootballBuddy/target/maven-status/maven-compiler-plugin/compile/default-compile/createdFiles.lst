@@ -2,6 +2,7 @@ com\capstone\fantasyfootballbuddy\backend\NFLPlayerData.class
 com\capstone\fantasyfootballbuddy\backend\NFLTeamData.class
 com\capstone\fantasyfootballbuddy\App.class
 com\capstone\fantasyfootballbuddy\backend\Player.class
+com\capstone\fantasyfootballbuddy\backend\NFLGameData.class
 com\capstone\fantasyfootballbuddy\backend\Roster.class
 com\capstone\fantasyfootballbuddy\PrimaryController.class
 com\capstone\fantasyfootballbuddy\backend\TestAPI.class

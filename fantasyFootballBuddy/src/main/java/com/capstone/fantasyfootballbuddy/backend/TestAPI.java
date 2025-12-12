@@ -61,4 +61,36 @@ public class TestAPI {
         return text;
         
     }
+    
+    
+    public static String getNFLGameString(int teamID, int season) {
+        
+        String text = "";
+        
+        String url = "https://tank01-nfl-live-in-game-real-time-statistics-nfl.p.rapidapi.com/getNFLTeamSchedule"
+            + "?teamID=" + teamID + "&season=" + season;
+        
+        try {
+            
+            AsyncHttpClient client = new DefaultAsyncHttpClient();
+            text = client.prepare("GET", url)
+            .setHeader("x-rapidapi-key", "f027be2167mshaca5ecb6034fd3cp146ad6jsne92e690fdb46")
+            .setHeader("x-rapidapi-host", "tank01-nfl-live-in-game-real-time-statistics-nfl.p.rapidapi.com")
+            .execute()
+            .toCompletableFuture()
+            .thenApply(response -> response.getResponseBody())
+            .join();
+
+            client.close();
+
+        } catch(Exception e) {
+
+            System.out.println("Unable to grab data from API");
+            e.printStackTrace();
+
+        } 
+        
+        return text;
+        
+    }
 }
